@@ -1,22 +1,20 @@
 curl -k -X POST -H "Content-Type: application/json" -d '{
-    "get_started": { "payload":
-        "GET_STARTED_CONSEJOS"
-    }
-}' "https://graph.facebook.com/v16.0/me/messenger_profile?access_token=EAAhTFvtmZAZBsBAJfKZA6XXNNFe03EnqG1RGZBOYvJlDVuZA1pU0k2PmpNqyXZAve605KkU82thkDD68dGDfgiqkJCbxgo6WjZAAi1SrUD2jbGoM3p1NNoAmcuZCYq9lsf5pxwUbrbY0GlKolkRV8WcORso1vAMvAtZBTymp3twEjWMrulbQ1VhaX"
+    "get_started": { "payload": "BOTON_INICIO" }
+}' "https://graph.facebook.com/v16.0/me/messenger_profile?access_token=EAAhTFvtmZAZBsBANXqoGV3amXV4h7rcnfHmqAaWBaTkznnhWN3ihO0yFZCGEw6nay3jEWEWIRwsNAKAJw9caaQMqSxAs7g8eU5tA5gzYR9otaHkDV3ZCRZACzUa49RcmZA4TgAJAi0YoNhc33KxHmXSeH0izrNpopofhTtGeHyymTcTAWlHg7r"
 
 
 curl -k -X POST -H "Content-Type: application/json" -d '{
     "greeting": [
         {
             "locale": "default",
-            "text": "Hola {{user_first_name}}, Soy Consejos de Salud y te ayudo a mejorar tu salud"
+            "text": "Hola {{user_first_name}}, para mejorar tu experiencia tenemos un ChatBot, un menÃº y asistencia humana. Nuestro compromiso es la satisfacciÃ³n del cliente."
         },
         {
-            "locale": "en_US",
-            "text": "Hi {{user_first_name}}"
+            "locale": "es_LA",
+            "text": "Hola {{user_first_name}}, para mejorar tu experiencia tenemos un ChatBot, un menÃº y asistencia humana. Nuestro compromiso es la satisfacciÃ³n del cliente."
         }
     ]
-}' "https://graph.facebook.com/v16.0/me/messenger_profile?access_token=EAAhTFvtmZAZBsBAJfKZA6XXNNFe03EnqG1RGZBOYvJlDVuZA1pU0k2PmpNqyXZAve605KkU82thkDD68dGDfgiqkJCbxgo6WjZAAi1SrUD2jbGoM3p1NNoAmcuZCYq9lsf5pxwUbrbY0GlKolkRV8WcORso1vAMvAtZBTymp3twEjWMrulbQ1VhaX"
+}' "https://graph.facebook.com/v16.0/me/messenger_profile?access_token=EAAhTFvtmZAZBsBANXqoGV3amXV4h7rcnfHmqAaWBaTkznnhWN3ihO0yFZCGEw6nay3jEWEWIRwsNAKAJw9caaQMqSxAs7g8eU5tA5gzYR9otaHkDV3ZCRZACzUa49RcmZA4TgAJAi0YoNhc33KxHmXSeH0izrNpopofhTtGeHyymTcTAWlHg7r"
 
 
 curl -k -X POST -H "Content-Type: application/json" -d '{
@@ -27,21 +25,62 @@ curl -k -X POST -H "Content-Type: application/json" -d '{
             "call_to_actions": [
                 {
                     "type": "postback",
-                    "title": "Habla con el doctor",
-                    "payload": "CARE_HELP"
+                    "title": "Inicio de Chat",
+                    "payload": "HOME"
                 },
                 {
                     "type": "postback",
-                    "title": "Menu de Productos",
-                    "payload": "PRODUCTS"
+                    "title": "Comprar ahora",
+                    "payload": "SHOP"
+                },
+                {
+                    "type": "postback",
+                    "title": "DÃ³nde estamos",
+                    "payload": "CITIES"
+                },
+                {
+                    "type": "postback",
+                    "title": "Horas de atenciÃ³n",
+                    "payload": "SCHEDULE"
                 },
                 {
                     "type": "web_url",
-                    "title": "Pagina Web",
-                    "url": "https://platzi.com",
+                    "title": "Sitio Web",
+                    "url": "https://immunotec.com/",
                     "webview_height_ratio": "full"
+                },
+                {
+                    "type": "postback",
+                    "title": "Eventos",
+                    "payload": "EVENTOS"
+                },
+                {
+                    "type": "postback",
+                    "title": "ContÃ¡ctenos",
+                    "payload": "CONTACT"
+                },
+                {
+                    "type": "postback",
+                    "title": "Preguntas frecuentes",
+                    "payload": "FAQS"
                 }
             ]
         }
     ]
-}' "https://graph.facebook.com/v16.0/me/messenger_profile?access_token=EAAhTFvtmZAZBsBAJfKZA6XXNNFe03EnqG1RGZBOYvJlDVuZA1pU0k2PmpNqyXZAve605KkU82thkDD68dGDfgiqkJCbxgo6WjZAAi1SrUD2jbGoM3p1NNoAmcuZCYq9lsf5pxwUbrbY0GlKolkRV8WcORso1vAMvAtZBTymp3twEjWMrulbQ1VhaX"
+}' "https://graph.facebook.com/v16.0/me/messenger_profile?access_token=EAAhTFvtmZAZBsBANXqoGV3amXV4h7rcnfHmqAaWBaTkznnhWN3ihO0yFZCGEw6nay3jEWEWIRwsNAKAJw9caaQMqSxAs7g8eU5tA5gzYR9otaHkDV3ZCRZACzUa49RcmZA4TgAJAi0YoNhc33KxHmXSeH0izrNpopofhTtGeHyymTcTAWlHg7r"
+
+
+
+// Copia de código
+curl -k -X POST -H "Content-Type: application/json" -d '{
+    "greeting": [
+        {
+            "locale": "default",
+            "text": "\u{1F44B} Hola {{user_first_name}}, para mejorar tu experiencia tenemos un \u{1F916} ChatBot, \u{2198} un menú y \u{1F64B} asistencia humana."
+        },
+        {
+            "locale": "en_US",
+            "text": "Hi {{user_first_name}}, to enhance your experience we have a \u{1F916} ChatBot, \u{2198} a menu and \u{1F64B} human assistance."
+        }
+    ]
+}' "https://graph.facebook.com/v16.0/me/messenger_profile?access_token=EAAhTFvtmZAZBsBANXqoGV3amXV4h7rcnfHmqAaWBaTkznnhWN3ihO0yFZCGEw6nay3jEWEWIRwsNAKAJw9caaQMqSxAs7g8eU5tA5gzYR9otaHkDV3ZCRZACzUa49RcmZA4TgAJAi0YoNhc33KxHmXSeH0izrNpopofhTtGeHyymTcTAWlHg7r"
